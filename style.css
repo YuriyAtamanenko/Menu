@@ -21,33 +21,69 @@ body {
 }
 
 .container {
-  display: flex;
   margin-left: auto;
   margin-right: auto;
-  width: 1200px;
+  max-width: 768px;
 }
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 1400px;
+    display: flex;
+  }
+  section {
+    width: calc(100% / 2);
+  }
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.menu-form {
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
 .sub-title {
   margin-top: 30px;
   margin-bottom: 10px;
+  text-align: center;
 }
 
-section {
-  width: 600px;
+.manu-select {
 }
 
-select {
-  display: flex;
-  flex-direction: column;
-}
+@media screen and (min-width: 768px) {
+  .sub-title {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-align: left;
+  }
 
-option {
-  width: 100px;
-  height: 30px;
+  .menu-form {
+    margin-left: 200px;
+    margin-right: 200px;
+  }
 }
 
 .submit-menu {
   margin-top: 40px;
   cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  margin-bottom: 50px;
+}
+
+@media screen and (min-width: 768px) {
+  .submit-menu {
+    margin-bottom: 0;
+  }
 }
 
 .shopping {
@@ -80,4 +116,37 @@ option {
 
 .add-shop-item {
   margin-top: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.add-input {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 25px;
+}
+
+.add-button {
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+}
+
+@media screen and (min-width: 768px) {
+  .add-shop-item {
+    margin-top: auto;
+    display: inline;
+    text-align: center;
+  }
+  .add-input {
+    display: inline;
+    margin: 0;
+  }
+  .add-button {
+    width: auto;
+  }
 }

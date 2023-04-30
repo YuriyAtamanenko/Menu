@@ -3,6 +3,7 @@ import { breakfest } from "./ingridients.js";
 const menuForm = document.querySelector(".menu-form");
 const container = document.querySelector(".shopping-list");
 const addForm = document.querySelector(".add-shop-item");
+const menuBtn = document.querySelector(".submit-menu");
 
 menuForm.addEventListener("submit", onSubmitMenuForm);
 addForm.addEventListener("submit", onAddNewProduct);
@@ -10,14 +11,14 @@ addForm.addEventListener("submit", onAddNewProduct);
 function onSubmitMenuForm(event) {
   event.preventDefault();
 
+  // menuBtn.disabled = true;
+
   const bfA = searchDish(event.currentTarget.elements.bfA.value);
   const bfB = searchDish(event.currentTarget.elements.bfB.value);
   const bfC = searchDish(event.currentTarget.elements.bfC.value);
   const bfD = searchDish(event.currentTarget.elements.bfD.value);
 
   const mySet = new Set([...bfA, ...bfB, ...bfC, ...bfD]);
-
-  console.log([...mySet]);
 
   createShoppingList([...mySet]);
 
