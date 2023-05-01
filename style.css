@@ -8,11 +8,12 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  padding-bottom: 58px;
+  padding-bottom: 50px;
 }
 .title {
   font-weight: 600;
   text-align: center;
+  margin-top: 10px;
 }
 
 .section-title {
@@ -90,6 +91,13 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+@media screen and (min-width: 768px) {
+  .shopping {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
 .shopping-list {
   max-height: 450px;
   display: flex;
@@ -149,4 +157,13 @@ body {
   .add-button {
     width: auto;
   }
+}
+
+.reset-btn {
+  display: block;
+  margin-top: 30px;
+  margin-left: auto;
+
+  margin-right: auto;
+  cursor: pointer;
 }
